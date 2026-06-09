@@ -1,0 +1,9 @@
+services:
+  swea: #nombre de la imagen
+    build: #como buildear
+      context: . #en la carpeta que esta parado
+    command: "/bin/sh" #que ejecutar cuando se inicia el container (terminal de linux)
+    stdin_open: true #que se mantenga prendido el standar-input de los conteiner (para que funcione lo anterior) 
+    tty: true #que se reenvie lo que escribe el conteiner a la consola de ubuntu
+    volumes:
+      - .:/app
