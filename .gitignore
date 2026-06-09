@@ -1,6 +1,7 @@
 __pycache__\.
 *.pyc
 *.png
+*.cdf
 
 temp*
 PreprocesamientoDatos/cache/*
