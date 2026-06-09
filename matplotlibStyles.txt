@@ -1,0 +1,30 @@
+# mi_estilo.mplstyle
+
+# Tamaños de fuente
+axes.titlesize: 30
+axes.labelsize: 28
+xtick.labelsize: 24
+ytick.labelsize: 24
+legend.fontsize: 26
+
+# Estilo del grillado
+grid.color: darkgrey
+grid.linestyle: :
+grid.linewidth: 0.5
+
+# Paleta de colores
+axes.prop_cycle: cycler('color', ['darkblue', 'mediumorchid', 'darkseagreen', 'slategrey', 'coral', 'peru'])
+
+# Tamaño de la figura
+figure.figsize: 18, 12
+
+# Estilo de las líneas (para mejorar la visibilidad al hacer zoom)
+lines.linewidth: 2
+lines.markersize: 6
+
+# Configuraciones adicionales para claridad
+axes.grid: True
+xtick.major.size: 7
+ytick.major.size: 7
+
+
