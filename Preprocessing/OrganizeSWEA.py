@@ -38,7 +38,7 @@ def organizeDataSWEA(YYYY: str, MM: str, DD: str) -> tuple[pd.DataFrame, np.ndar
         corresponds to the energy vector.
     """
 
-    filepath = f"swea_files/mvn_swe_l2_svy3d_{YYYY}{MM}{DD}_v05_r01.cdf"
+    filepath = f"swea_data/mvn_swe_l2_svy3d_{YYYY}{MM}{DD}_v05_r01.cdf"
     file_path = Path(filepath)
 
     if not file_path.exists():
@@ -77,8 +77,6 @@ def organizeDataSWEA(YYYY: str, MM: str, DD: str) -> tuple[pd.DataFrame, np.ndar
         "quality": quality,
         "binning": binning,
     })
-
-    cdf.close()
 
     return df_swea, energy, flux_energy_time
 

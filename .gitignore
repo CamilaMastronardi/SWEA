@@ -2,6 +2,9 @@ __pycache__\.
 *.pyc
 *.png
 *.cdf
+*.csv
+*.xlsx
+*.part
 
 temp*
 PreprocesamientoDatos/cache/*
