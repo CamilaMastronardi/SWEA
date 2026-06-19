@@ -1,5 +1,5 @@
 # ============================================================
-# Plot SWEA MAVEN L2 SVY3D - ventana 03:00–06:00 UTC
+# Download data SWEA MAVEN L2 SVY3D
 # ============================================================
 
 import urllib.request
@@ -13,6 +13,22 @@ from datetime import timedelta
 # ------------------------------------------------------------
 
 def downloadSWEAFile(YYYY: str, MM: str, DD: str): 
+    """
+    Downloads the SWEA data file for a given date from the MAVEN mission website.
+
+    Parameters
+    ----------
+    YYYY: str
+        Year in 'YYYY' format.
+    MM: str
+        Month in 'MM' format.
+    DD: str
+        Day in 'DD' format.
+    
+    Returns
+    -------
+    None
+    """
     data_dir = Path("swea_files")
     data_dir.mkdir(exist_ok=True)
 
@@ -30,6 +46,9 @@ def downloadSWEAFile(YYYY: str, MM: str, DD: str):
     else:
         print("File already exists.")
 
+#------------------------------------------------------------
+# Main function to handle command line arguments and download files
+#------------------------------------------------------------
 
 if __name__ == "__main__":
     if len(sys.argv) not in (2,3):
@@ -40,7 +59,7 @@ if __name__ == "__main__":
         fecha = sys.argv[1]
         YYYY, MM, DD = fecha.split('-')
         downloadSWEAFile(YYYY,MM,DD)
-        print('Finished ')
+        print('Finished')
     elif len(sys.argv) == 3:
         initial_parameter = sys.argv[1]
         final_parameter = sys.argv[2]
